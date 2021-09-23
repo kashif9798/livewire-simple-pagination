@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c2a4168a901f768971a036ad7e4478c",
+    "content-hash": "cd44358f63989d0ec0fe601ca84d0636",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,6 +121,55 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "bytecity/tylersoft",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/bytecity/taylersoft-php-laravel-package.git",
+                "reference": "418c5fcb8ad5504cd5f4c6ec4321eb9467dcf0c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/bytecity%2Ftaylersoft-php-laravel-package/repository/archive.zip?sha=418c5fcb8ad5504cd5f4c6ec4321eb9467dcf0c0",
+                "reference": "418c5fcb8ad5504cd5f4c6ec4321eb9467dcf0c0",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bytecity\\Tylersoft\\TylersoftServiceProvider"
+                    ],
+                    "aliases": {
+                        "Tylersoft": "Bytecity\\Tylersoft\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bytecity\\Tylersoft\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Kashif",
+                    "email": "qazi.kashif97@gmail.com"
+                }
+            ],
+            "description": "A payment integration package for Stencil Technologies Integration",
+            "support": {
+                "issues": "https://gitlab.com/api/v4/projects/29683136/issues"
+            },
+            "time": "2021-09-22T13:44:14+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

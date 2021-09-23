@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Bytecity\Tylersoft\Facade\Tylersoft;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $id_s = [1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
+
+    return view('welcome', [
+        'id_s' => $id_s
+    ]);
+});
+
+
+
+
+Route::get('/a', function () {
+    $data = [
+        "amount" => 11,
+        "accountno" => 26777063984,
+        "msisdn" => 26777063984,
+        "currencycode" => "BWP",
+        "name" => "Mompati Mokoka",
+        "transactionid" => "TRX_0008786707"
+    ];
+
+    return Tylersoft::request($data, true);
 });

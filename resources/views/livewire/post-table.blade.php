@@ -3,6 +3,9 @@
         <input type="text" class="form-control" wire:model="search" placeholder="Search">
         <thead>
             <tr>
+                <th>
+                    <input id="head-checkbox" type="checkbox">
+                </th>
                 <th>DB ID</th>
                 <th>Title</th>
                 <th>Edit</th>
@@ -12,6 +15,9 @@
         <tbody>
             @foreach ($posts as $post)
                 <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
                     <td>
                         {{ $post->id }}
                     </td>
@@ -30,3 +36,13 @@
     </table>
     {{ $posts->links() }}
 </div>
+
+@push('script')
+    <script>
+        $(document).ready(function(){
+            $("#head-checkbox").click(function(){
+                $('input:checkbox').not(this).prop('checked', this.checked);
+            });
+        });
+    </script>
+@endpush

@@ -13,6 +13,12 @@ class UserTable extends Component
     protected $paginationTheme = 'bootstrap';
 
     public $search = '';
+
+    public $id_s = '';
+
+    public function mount($id_s){
+        $this->id_s = $id_s;
+    }
  
     public function search(){
         $this->resetPage();
@@ -23,6 +29,7 @@ class UserTable extends Component
         $users = User::when(!empty($this->search),function($q){
             $q->where('name', 'like', '%'.$this->search.'%');
         })
+        ->whereIn('id',$this->id_s)
         ->paginate(5);
 
         return view('livewire.user-table',[

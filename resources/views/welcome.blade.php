@@ -16,6 +16,7 @@
                 color:blue !important;
             }
         </style>
+        @stack('head')
     </head>
     <body>
         
@@ -35,7 +36,7 @@
                         </div>
                         <div class="card-body">
                             <div id="userBody">
-                                <livewire:user-table >
+                                <livewire:user-table :id_s="$id_s" >
                             </div>
                             <div id="postBody" style="display: none;">
                                 <livewire:post-table >
@@ -68,5 +69,6 @@
                 });
             });
         </script>
+        @stack('script')
     </body>
 </html>
